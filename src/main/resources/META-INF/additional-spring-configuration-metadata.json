@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "MONGODBNAME",
+      "type": "java.lang.String",
+      "description": "The database name"
+    }
+  ]
+}
