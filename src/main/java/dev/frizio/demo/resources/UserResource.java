@@ -38,7 +38,7 @@ public class UserResource {
     }
 
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
-    public Mono<ResponseEntity<User>> save(/*@Valid*/ @RequestBody User user) {
+    public Mono<ResponseEntity<User>> save(@Valid @RequestBody User user) {
         return userMongoRepository
                 .save(user)
                 .map( userSaved -> 
