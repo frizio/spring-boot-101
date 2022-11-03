@@ -24,10 +24,10 @@ public class SpringBoot101Application {
   System.out.println("*********************** Execute CommandLineRunner ***********************");
   userMongoRepository.deleteAll().subscribe();
     return args -> {
-        userMongoRepository.save(new User("Vincenzo", "Racca")).subscribe();
-        userMongoRepository.save(new User("Mario", "Rossi")).subscribe();
-        userMongoRepository.save(new User("Gennaro", "Esposito")).subscribe();
-        userMongoRepository.save(new User("Diego", "della Lega")).subscribe();
+        userMongoRepository.save(new User("Jules", "Winnfield")).subscribe();
+        userMongoRepository.save(new User("Vincent", "Vega")).subscribe();
+        userMongoRepository.save(new User("Winston", "Wolf")).subscribe();
+        userMongoRepository.save(new User("Jimmie", "Dimmick")).subscribe();
     };
   }
 
