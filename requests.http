@@ -1,0 +1,69 @@
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+### Get all Users
+GET http://{{host}}/students
+
+###
+POST  http://{{host}}/students
+Content-Type: {{contentType}}
+
+{
+    "name": "Vincent Vega",
+    "email": "vincent@pulp.com",
+    "department": {
+      "name": "Computer Science",
+      "location": "Ed. 17 Viale delle Scienze, Palermo"
+    },
+    "subjects": [
+      {
+        "name": "Java",
+        "mark": 90
+      },
+      {
+        "name": "Python",
+        "mark": 70
+      },
+      {
+        "name": "Typescript",
+        "mark": 75
+      }
+    ]
+}
+
+###
+GET  http://{{host}}/students/636523412a0965485c1b6173
+
+###
+PUT  http://{{host}}/students
+Content-Type: {{contentType}}
+
+{
+    "id": "636523412a0965485c1b6173",
+    "name": "Marsellus Wallace",
+    "email": "marsellus@pulp.com",
+    "department": {
+      "name": "Computer Science",
+      "location": "Ed. 17 Viale delle Scienze, Palermo"
+    },
+    "subjects": [
+      {
+        "name": "Java",
+        "mark": 90
+      },
+      {
+        "name": "Python",
+        "mark": 70
+      },
+      {
+        "name": "Typescript",
+        "mark": 75
+      }
+    ]
+}
+
+###
+DELETE  http://{{host}}/students/636523412a0965485c1b6173
+
