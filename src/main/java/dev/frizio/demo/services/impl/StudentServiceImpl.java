@@ -64,5 +64,15 @@ public class StudentServiceImpl implements StudentService {
     return studentRepository.findAll(sort);
   }
 
+  @Override
+  public List<Student> getStudentsByDepartmentName(String deptName) {
+    return studentRepository.findByDepartmentName(deptName);
+  }
+
+  @Override
+  public List<Student> getStudentsBySubjectName(String subName) {
+    return studentRepository.findBySubjectsName(subName);
+  }
+
 
 }

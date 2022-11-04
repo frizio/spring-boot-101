@@ -19,4 +19,7 @@ public interface StudentService {
   public List<Student> getAllStudentsWithPagination (int pageNo, int pageSize);
   public List<Student> getAllStudentsWithSorting ();
 
+  public List<Student> getStudentsByDepartmentName(String deptName);
+  public List<Student> getStudentsBySubjectName(String subName);
+
 }

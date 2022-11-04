@@ -75,5 +75,16 @@ public class StudentController {
     return studentService.getAllStudentsWithSorting();
   }
 
+
+  @GetMapping("/bydepartmentname")
+	public List<Student> getStudentsByDepartmentName(@RequestParam String deptName) {
+		return studentService.getStudentsByDepartmentName(deptName);
+	}
+	
+	@GetMapping("/bysubjectname")
+	public List<Student> getStudentsBySubjectName(@RequestParam String subName) {
+		return studentService.getStudentsBySubjectName(subName);
+	}
+
 }
   

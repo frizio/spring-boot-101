@@ -80,3 +80,10 @@ GET  http://{{host}}/students/withpagination?pageNo=2&pageSize=3
 
 ###
 GET  http://{{host}}/students/withsorting
+
+
+###
+GET  http://{{host}}/students/bydepartmentname?deptName=Biology
+
+###
+GET  http://{{host}}/students/bysubjectname?subName=Matlab
