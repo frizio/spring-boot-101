@@ -64,6 +64,12 @@ Content-Type: {{contentType}}
     ]
 }
 
-###
-DELETE  http://{{host}}/students/636523412a0965485c1b6173
 
+###
+GET  http://{{host}}/students/byname?name=Vincent%20Vega
+
+###
+GET  http://{{host}}/students/bynameandemail?name=Vincent%20Vega&email=vincent@pulp.com
+
+###
+GET  http://{{host}}/students/bynameoremail?name=Vincent%20Vega&email=mia@pulp.com

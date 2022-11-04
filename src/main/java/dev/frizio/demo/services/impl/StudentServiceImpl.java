@@ -37,4 +37,17 @@ public class StudentServiceImpl implements StudentService {
     return "Student has been deleted.";
   }
 
+
+  public List<Student> getStudentsByName (String name) {
+    return studentRepository.findByName(name);
+  }
+  
+  public List<Student> getStudentsByNameAndEmail (String name, String email) {
+    return studentRepository.findByNameAndEmail(name, email);
+  }
+  
+  public List<Student> getStudentsByNameOrMail (String name, String email) {
+    return studentRepository.findByNameOrEmail(name, email);
+  }
+
 }
