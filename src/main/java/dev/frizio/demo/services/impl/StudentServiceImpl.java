@@ -74,5 +74,15 @@ public class StudentServiceImpl implements StudentService {
     return studentRepository.findBySubjectsName(subName);
   }
 
+  @Override
+  public List<Student> getStudentsByEmailLike(String subName) {
+    return studentRepository.findByEmailIsLike(subName);
+  }
+
+  @Override
+  public List<Student> getStudentsByNameStartsWith(String name) {
+    return studentRepository.findByNameStartsWith(name);
+  }
+
 
 }

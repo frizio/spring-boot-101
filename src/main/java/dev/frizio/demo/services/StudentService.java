@@ -22,4 +22,7 @@ public interface StudentService {
   public List<Student> getStudentsByDepartmentName(String deptName);
   public List<Student> getStudentsBySubjectName(String subName);
 
+  public List<Student> getStudentsByEmailLike(String email);
+  public List<Student> getStudentsByNameStartsWith(String name);
+
 }

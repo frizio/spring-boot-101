@@ -77,14 +77,25 @@ public class StudentController {
 
 
   @GetMapping("/bydepartmentname")
-	public List<Student> getStudentsByDepartmentName(@RequestParam String deptName) {
-		return studentService.getStudentsByDepartmentName(deptName);
-	}
-	
-	@GetMapping("/bysubjectname")
-	public List<Student> getStudentsBySubjectName(@RequestParam String subName) {
-		return studentService.getStudentsBySubjectName(subName);
-	}
+  public List<Student> getStudentsByDepartmentName(@RequestParam String deptName) {
+    return studentService.getStudentsByDepartmentName(deptName);
+  }
+  
+  @GetMapping("/bysubjectname")
+  public List<Student> getStudentsBySubjectName(@RequestParam String subName) {
+    return studentService.getStudentsBySubjectName(subName);
+  }
+
+
+  @GetMapping("/byEmailLike")
+  public List<Student> getStudentsByEmailLike(@RequestParam String email) {
+    return studentService.getStudentsByEmailLike(email);
+  }
+  
+  @GetMapping("/byNameStartsWith")
+  public List<Student> getStudentsByNameStartsWith(@RequestParam String name) {
+    return studentService.getStudentsByNameStartsWith(name);
+  }
 
 }
   
