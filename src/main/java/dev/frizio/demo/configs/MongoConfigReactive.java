@@ -18,9 +18,9 @@ import lombok.RequiredArgsConstructor;
 
 
 @Configuration
-@Profile("dev")
+@Profile("dev-reactive")
 @RequiredArgsConstructor
-public class MongoConfig extends AbstractReactiveMongoConfiguration {
+public class MongoConfigReactive extends AbstractReactiveMongoConfiguration {
 
    private final Environment env;
 
