@@ -73,3 +73,10 @@ GET  http://{{host}}/students/bynameandemail?name=Vincent%20Vega&email=vincent@p
 
 ###
 GET  http://{{host}}/students/bynameoremail?name=Vincent%20Vega&email=mia@pulp.com
+
+
+###
+GET  http://{{host}}/students/withpagination?pageNo=2&pageSize=3
+
+###
+GET  http://{{host}}/students/withsorting

@@ -3,6 +3,9 @@ package dev.frizio.demo.services.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import dev.frizio.demo.domanis.Student;
@@ -49,5 +52,17 @@ public class StudentServiceImpl implements StudentService {
   public List<Student> getStudentsByNameOrMail (String name, String email) {
     return studentRepository.findByNameOrEmail(name, email);
   }
+
+
+  public List<Student> getAllStudentsWithPagination (int pageNo, int pageSize) {
+    Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
+    return studentRepository.findAll(pageable).getContent();
+  }
+  
+  public List<Student> getAllStudentsWithSorting () {
+    Sort sort = Sort.by(Sort.Direction.DESC, "name", "email");
+    return studentRepository.findAll(sort);
+  }
+
 
 }

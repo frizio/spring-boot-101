@@ -64,5 +64,16 @@ public class StudentController {
     return studentService.getStudentsByNameOrMail(name, email);
   }
 
+
+  @GetMapping("/withpagination")
+  public List<Student> getAllStudentsWithPagination(@RequestParam int pageNo, @RequestParam int pageSize) {
+    return studentService.getAllStudentsWithPagination(pageNo, pageSize);
+  }
+  
+  @GetMapping("/withsorting")
+  public List<Student> getAllStudentsWithSorting() {
+    return studentService.getAllStudentsWithSorting();
+  }
+
 }
   
