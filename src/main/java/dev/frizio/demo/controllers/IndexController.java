@@ -1,4 +1,4 @@
-package dev.frizio.demo.controller;
+package dev.frizio.demo.controllers;
 
 import org.springframework.stereotype.Controller;
 
