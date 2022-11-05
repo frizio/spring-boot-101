@@ -42,8 +42,8 @@ Content-Type: {{contentType}}
 
 {
     "id": "636523412a0965485c1b6173",
-    "name": "Marsellus Wallace",
-    "email": "marsellus@pulp.com",
+    "name": "Jules Winnifield",
+    "email": "jules@pulp.com",
     "department": {
       "name": "Computer Science",
       "location": "Ed. 17 Viale delle Scienze, Palermo"
@@ -51,7 +51,7 @@ Content-Type: {{contentType}}
     "subjects": [
       {
         "name": "Java",
-        "mark": 90
+        "mark": 100
       },
       {
         "name": "Python",
@@ -64,6 +64,8 @@ Content-Type: {{contentType}}
     ]
 }
 
+###
+DELETE  http://{{host}}/students/63652dfa2a0965485c1b6176
 
 ###
 GET  http://{{host}}/students/byname?name=Vincent%20Vega

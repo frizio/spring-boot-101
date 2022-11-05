@@ -31,6 +31,17 @@ public class Student {
   
   @Transient
   private double percentage;
+
+  public double getPercentage() {
+    if (subjects != null && subjects.size() > 0) {
+      int total = 0;
+      for (Subject subject : subjects) {
+        total += subject.getMark();
+      }
+      return total/subjects.size();
+    }
+    return 0.00;
+  }
   
   
 }
