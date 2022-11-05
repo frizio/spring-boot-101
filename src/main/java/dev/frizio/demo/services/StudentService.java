@@ -19,8 +19,8 @@ public interface StudentService {
   public List<Student> getAllStudentsWithPagination (int pageNo, int pageSize);
   public List<Student> getAllStudentsWithSorting ();
 
-  public List<Student> getStudentsByDepartmentName(String deptName);
-  public List<Student> getStudentsBySubjectName(String subName);
+  public List<Student> getStudentsByDepartmentId(String deptId);
+  public List<Student> getStudentsBySubjectId(String subId);
 
   public List<Student> getStudentsByEmailLike(String email);
   public List<Student> getStudentsByNameStartsWith(String name);

@@ -11,30 +11,30 @@ POST  http://{{host}}/students
 Content-Type: {{contentType}}
 
 {
-    "name": "Vincent Vega",
-    "email": "vincent@pulp.com",
+    "name": "Mia Wallace",
+    "email": "mia@pulp.com",
     "department": {
-      "name": "Computer Science",
+      "name": "Biology",
       "location": "Ed. 17 Viale delle Scienze, Palermo"
     },
     "subjects": [
       {
-        "name": "Java",
-        "mark": 90
-      },
-      {
         "name": "Python",
-        "mark": 70
+        "mark": 100
       },
       {
         "name": "Typescript",
+        "mark": 70
+      },
+      {
+        "name": "Javascript",
         "mark": 75
       }
     ]
 }
 
 ###
-GET  http://{{host}}/students/636523412a0965485c1b6173
+GET  http://{{host}}/students/6366a3c383979d4888d9f12c
 
 ###
 PUT  http://{{host}}/students
@@ -82,9 +82,9 @@ GET  http://{{host}}/students/withsorting
 
 
 ###
-GET  http://{{host}}/students/bydepartmentname?deptName=Biology
+GET  http://{{host}}/students/bydepartmentid?deptId=6366a3bb83979d4888d9f128
 ###
-GET  http://{{host}}/students/bysubjectname?subName=Matlab
+GET  http://{{host}}/students/bysubjectid?subId=6366a81283979d4888d9f134
 
 ###
 GET  http://{{host}}/students/byEmailLike?email=gmail

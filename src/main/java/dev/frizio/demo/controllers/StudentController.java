@@ -76,14 +76,14 @@ public class StudentController {
   }
 
 
-  @GetMapping("/bydepartmentname")
-  public List<Student> getStudentsByDepartmentName(@RequestParam String deptName) {
-    return studentService.getStudentsByDepartmentName(deptName);
+  @GetMapping("/bydepartmentid")
+  public List<Student> getStudentsByDepartmentId(@RequestParam String deptId) {
+    return studentService.getStudentsByDepartmentId(deptId);
   }
   
-  @GetMapping("/bysubjectname")
-  public List<Student> getStudentsBySubjectName(@RequestParam String subName) {
-    return studentService.getStudentsBySubjectName(subName);
+  @GetMapping("/bysubjectid")
+  public List<Student> getStudentsBySubjectId(@RequestParam String subId) {
+    return studentService.getStudentsBySubjectId(subId);
   }
 
 

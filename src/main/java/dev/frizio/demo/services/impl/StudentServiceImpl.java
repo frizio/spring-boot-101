@@ -83,13 +83,13 @@ public class StudentServiceImpl implements StudentService {
   }
 
   @Override
-  public List<Student> getStudentsByDepartmentName(String deptName) {
-    return studentRepository.findByDepartmentName(deptName);
+  public List<Student> getStudentsByDepartmentId(String deptId) {
+    return studentRepository.findByDepartmentId(deptId);
   }
 
   @Override
-  public List<Student> getStudentsBySubjectName(String subName) {
-    return studentRepository.findBySubjectsName(subName);
+  public List<Student> getStudentsBySubjectId(String subId) {
+    return studentRepository.findBySubjectsId(subId);
   }
 
   @Override
