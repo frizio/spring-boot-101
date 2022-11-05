@@ -29,8 +29,9 @@ public class Student {
 
   private List<Subject> subjects;
   
-  @Transient
+  @Transient 
   private double percentage;
+
 
   public double getPercentage() {
     if (subjects != null && subjects.size() > 0) {
