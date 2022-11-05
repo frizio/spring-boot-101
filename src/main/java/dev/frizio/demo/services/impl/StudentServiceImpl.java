@@ -8,8 +8,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import dev.frizio.demo.domanis.Department;
 import dev.frizio.demo.domanis.Student;
+import dev.frizio.demo.domanis.Subject;
+import dev.frizio.demo.repos.DepartmentRepository;
 import dev.frizio.demo.repos.StudentRepository;
+import dev.frizio.demo.repos.SubjectRepository;
 import dev.frizio.demo.services.StudentService;
 
 @Service
@@ -18,12 +22,26 @@ public class StudentServiceImpl implements StudentService {
   @Autowired
   StudentRepository studentRepository;
 
+  @Autowired
+  DepartmentRepository departmentRepository;
+
+  @Autowired
+  SubjectRepository subjectRepository;
+
 
   public List<Student> getAllStudents() {
     return studentRepository.findAll();
   }
 
   public Student createStudent (Student student) {
+    Department department = student.getDepartment();
+    if (department != null) {
+      departmentRepository.save(department);
+    }
+    List<Subject> subjects = student.getSubjects();
+    if (subjects != null && subjects.size() > 0) {
+      subjectRepository.saveAll(subjects);
+    }
     return studentRepository.save(student);
   }
   
@@ -42,7 +60,6 @@ public class StudentServiceImpl implements StudentService {
 
 
   public List<Student> getStudentsByName (String name) {
-    //return studentRepository.findByName(name);
     return studentRepository.getByName(name);
   }
   
