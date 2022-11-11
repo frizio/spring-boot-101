@@ -1,0 +1,13 @@
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+### Get all Users
+GET http://{{host}}/
+
+###
+POST  http://{{host}}/
+Content-Type: {{contentType}}
+
+{ }
