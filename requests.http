@@ -4,10 +4,13 @@
 @contentType = application/json
 
 ### Get all Users
-GET http://{{host}}/
+GET http://{{host}}/products
 
 ###
 POST  http://{{host}}/
 Content-Type: {{contentType}}
 
 { }
+
+### 
+GET http://{{host}}/products/2
