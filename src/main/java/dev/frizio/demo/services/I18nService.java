@@ -1,5 +1,5 @@
 package dev.frizio.demo.services;
 
-public interface GreetingService {
+public interface I18nService {
     String sayGreeting();
 }
