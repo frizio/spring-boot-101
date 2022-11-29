@@ -2,7 +2,6 @@ spring:
   profiles:
     active:
       - EN
-      - dev
 
 server:
   port: 8080

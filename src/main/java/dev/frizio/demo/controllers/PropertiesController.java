@@ -23,7 +23,7 @@ public class PropertiesController {
     @Autowired
     private DemoProps demoProps;
 
-    @GetMapping(value = "/with-value")
+    @GetMapping(value = "/value")
     public String logPropsWithValue() {
         log.info("Property 1: " + message);
         log.info("Property 2: " + version);
@@ -31,7 +31,7 @@ public class PropertiesController {
         return "OK";
     }
 
-    @GetMapping(value = "/from-class")
+    @GetMapping(value = "/class")
     public DemoProps getPropsFromConfigClass() {
         log.info(demoProps.toString());
         return demoProps;

@@ -1,4 +1,4 @@
-package dev.frizio.demo;
+package dev.frizio.demo.controllers;
 
 import dev.frizio.demo.services.I18nService;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/ciao")
+@RequestMapping(value = "/i18n")
 public class I18nController {
 
     private final I18nService i18nService;
