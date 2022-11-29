@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active:
+        - EN
+        - dev
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
