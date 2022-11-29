@@ -1,8 +1,8 @@
 spring:
   profiles:
     active:
-        - EN
-        - dev
+      - EN
+      - dev
 
 server:
   port: 8080
@@ -12,3 +12,14 @@ server:
 demo:
   message: "This is a message"
   version: 66
+
+demo-props:
+  pageSize: 10
+  contact:
+    pageSize: 5
+    successMsg: Your message is submitted successfully.
+  branches:
+    - NewYork
+    - Delhi
+    - Paris
+    - Singapore
