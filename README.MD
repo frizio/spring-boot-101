@@ -25,7 +25,7 @@ mvn spring-boot:run "-Dspring-boot.run.profiles=EN,qa"
 dir env:        
 $env:SPRING_PROFILES_ACTIVE="ES,qa"
 mvn clean package
-java -jar .	argetspring-boot-101-1.0.0.jar
+java -jar .\target\spring-boot-101-1.0.0.jar
 ```
 
 ## Create docker image
