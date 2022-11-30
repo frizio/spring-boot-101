@@ -11,12 +11,13 @@ server:
 demo:
   message: "This is a message"
   version: 66
+  javaHome: ${JAVA_HOME}
 
 demo-props:
   pageSize: 10
   contact:
     pageSize: 5
-    successMsg: Your message is submitted successfully.
+    successMsg: The success message.
   branches:
     - NewYork
     - Delhi

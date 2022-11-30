@@ -18,6 +18,10 @@ public class PropertiesController {
     private String message;
     @Value("${demo.version}")
     private int version;
+
+    @Value("${demo.javaHome}")
+    private String javaHome;
+
     @Autowired
     private Environment environment;
     @Autowired
@@ -28,6 +32,7 @@ public class PropertiesController {
         log.info("Property 1: " + message);
         log.info("Property 2: " + version);
         log.info("Property 3 (from env): " + environment.getProperty("JAVA_HOME"));
+        log.info("Property 4: (env variable referred from application.yml): " + javaHome);
         return "OK";
     }
 
