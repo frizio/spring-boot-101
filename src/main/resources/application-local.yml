@@ -1,0 +1,20 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+demo:
+  message: "This is a message from LOCAL"
+  version: 66
+  javaHome: ${JAVA_HOME}
+
+demo-props:
+  pageSize: 10
+  contact:
+    pageSize: 5
+    successMsg: The success message in LOCAL.
+  branches:
+    - NewYork
+    - Delhi
+    - Paris
+    - Singapore

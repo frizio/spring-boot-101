@@ -1,0 +1,15 @@
+demo:
+  message: "This is a message - QA/PREPROD environment"
+  version: 666666
+  javaHome: ${JAVA_HOME}
+
+demo-props:
+  pageSize: 1000
+  contact:
+    pageSize: 520
+    successMsg: The success message in QA/PREPROD.
+  branches:
+    - Palermo
+    - Catania
+    - Messina
+    - New York

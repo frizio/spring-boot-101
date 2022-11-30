@@ -1,0 +1,15 @@
+demo:
+  message: "This is a message - DEV environment"
+  version: 666
+  javaHome: ${JAVA_HOME}
+
+demo-props:
+  pageSize: 100
+  contact:
+    pageSize: 50
+    successMsg: The success message in DEV.
+  branches:
+    - Ascoli
+    - Andria
+    - Foggia
+    - Parigi
