@@ -1,3 +1,17 @@
+#debug: true
+#trace: true
+logging:
+  level:
+    root:
+      INFO
+    dev:
+      frizio:
+        demo:
+          controllers:
+            DEBUG
+          services:
+            TRACE
+
 server:
   port: 8080
   servlet:
@@ -8,6 +22,10 @@ spring:
     active:
       - EN
       - local
+  output:
+    ansi:
+      enabled: detect
+      
 # Note: Active profiles can be overridden with env variable SPRING_PROFILES_ACTIVE
 # or using Java System Property "-D spring-boot.run.profiles"
 
@@ -27,3 +45,4 @@ spring:
 #    - Delhi
 #    - Paris
 #    - Singapore
+
