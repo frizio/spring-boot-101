@@ -17,6 +17,8 @@ public class SpringBoot101Application {
 
     SpringApplication.run(SpringBoot101Application.class, args);
 
+    String javaVersion = System.getProperty("java.version");
+    
     Runtime runtime = Runtime.getRuntime();
     final NumberFormat format = NumberFormat.getInstance();
     final long maxMemory = runtime.maxMemory();
@@ -25,6 +27,7 @@ public class SpringBoot101Application {
     final long mb = 1024 * 1024;
     final String mega = " MB";
     log.info("========================== Memory Info ==========================");
+    log.info("JAVA version: " + javaVersion);
     log.info("Free memory: " + format.format(freeMemory / mb) + mega);
     log.info("Allocated memory: " + format.format(allocatedMemory / mb) + mega);
     log.info("Max memory: " + format.format(maxMemory / mb) + mega);
