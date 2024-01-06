@@ -7,10 +7,10 @@
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
-	            <!-- 
-	             %-5level %C{1.}:%line %msg%n%throwable
-	             -->
-	            %green(%-5level) %yellow(%C{1.}:%line) %msg%n%throwable
+                <!-- 
+                %green(%-5level) %yellow(%C:%line) %msg%n%throwable
+                -->
+                %-5level %C:%line %msg%n%throwable
             </Pattern>
         </layout>
     </appender>
